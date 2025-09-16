@@ -52,33 +52,74 @@
   </div>
 </section>
   
-
-<!-- Dimensiones Formativas -->
 <section id="dimensiones">
   <div class="container">
     <h3 class="section-title">Dimensiones Formativas</h3>
     <div class="sequence">
+      
+      <!-- Card 1 -->
       <article class="card">
         <img src="img/1_20250813_124347_0000.svg" alt="Gestión Digital institucional" class="card-img">
         <strong>Gestión Institucional</strong>
         <small>Desarrolla habilidades clave para la gestión efectiva en entornos organizacionales.</small>
-        <a href="https://aulavirtual.fundabit.gob.ve/login/index.php">Ver más</a>
+        <button class="btn-ver" onclick="abrirModal('modal1')">Ver más</button>
       </article>
-      <article class="card">
-        <img src="img/2_20250813_124347_0001.svg" alt="Pedagogía en la Era Digital" class="card-img">
-        <strong>Pedagogía y TIC</strong>
-        <small>Adquiere competencias en el uso de herramientas tecnológicas y plataformas digitales.</small>
-        <a href="https://aulavirtual.fundabit.gob.ve/login/index.php">Ver más</a>
-      </article>
+
       <article class="card">
         <img src="img/3_20250813_124347_0002.svg" alt="Laboratorio de Innovación Tecnológica" class="card-img">
         <strong>Tecnología e Innovación</strong>
         <small>Descubre metodologías y herramientas para una educación moderna e innovadora.</small>
-        <a href="https://aulavirtual.fundabit.gob.ve/login/index.php">Ver más</a>
+        <button class="btn-ver" onclick="abrirModal('modal3')">Ver más</button>
       </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="img/2_20250813_124347_0001.svg" alt="Pedagogía en la Era Digital" class="card-img">
+        <strong>Pedagogía y TIC</strong>
+        <small>Adquiere competencias en el uso de herramientas tecnológicas y plataformas digitales.</small>
+        <button class="btn-ver" onclick="abrirModal('modal2')">Ver más</button>
+      </article>
+
+      
+
     </div>
   </div>
 </section>
+
+<!-- 🔹 Modales -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+    <h3>Gestión Institucional</h3>
+    <p>
+      Centrada en fortalecer el perfil del profesional en el área organizacional y estratégica de Fundabit; contará con herramientas para el desarrollo de habilidades blandas y transversales para optimizar su desempeño y contribuir de manera más efectiva a los proyectos de la Fundación.
+    </p>
+    <a href="https://aulavirtual.fundabit.gob.ve/login/index.php" class="btn-ir" target="_blank">Ir al Aula Virtual</a>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+    <h3>Pedagogía y TIC</h3>
+    <p>
+      Centrada en potenciar el perfil del profesional en el área pedagógica, a través de metodologías diseñadas para enriquecer los procesos de enseñanza y aprendizaje con enfoque en la integración tecnológica.
+    </p>
+    <a href="https://aulavirtual.fundabit.gob.ve/login/index.php" class="btn-ir" target="_blank">Ir al Aula Virtual</a>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal('modal3')">&times;</span>
+    <h3>Tecnología e Innovación</h3>
+    <p>
+      Centrada en fortalecer el perfil del profesional en el área de tecnología e innovación, a través de un conjunto de conocimientos, habilidades y competencias relacionadas con el manejo, comprensión y aplicación de las herramientas TIC y las nuevas Tecnologías Digitales para su implementación en la labor educativa.
+    </p>
+    <a href="https://aulavirtual.fundabit.gob.ve/login/index.php" class="btn-ir" target="_blank">Ir al Aula Virtual</a>
+  </div>
+</div>
+
 
 <!-- Quiénes Somos -->
 <section id="quienes-somos">
@@ -154,6 +195,22 @@
 
 
 <script>
+function abrirModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function cerrarModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+// Cerrar al hacer clic fuera del modal
+window.onclick = function(event) {
+  const modales = document.getElementsByClassName('modal');
+  for (let i = 0; i < modales.length; i++) {
+    if (event.target == modales[i]) {
+      modales[i].style.display = "none";
+    }
+  }
+}
+
 const carruselInner = document.getElementById('carruselInner');
 const totalImages = carruselInner.children.length;
 let index = 0;
