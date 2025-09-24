@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - AulaBit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    #contacto-body {
+    background: url("css/img/fondo.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    }
+
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #be223b;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header p {
+      color: #000000;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 2px solid #2980b9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(41, 128, 185, 0.15);
+    }
+
+    .contact-card i {
+      font-size: 2rem;
+      color: #2980b9;
+      margin-bottom: 15px;
+    }
+
+    .contact-card h2 {
+      font-size: 1.5rem;
+      color: #be223b;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p, .contact-card a {
+      font-size: 1rem;
+      color: #000000;
+      margin: 5px 0;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: #be223b;
+    }
+
+    .social-links ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      font-size: 1.8rem;
+      color: #2980b9;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #be223b;
+    }
+
+    .support {
+      background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border: 2px solid #2980b9;
+    }
+
+    .support a {
+      display: inline-block;
+      background: #be223b;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+      box-shadow: 0 5px 15px rgba(190, 34, 59, 0.3);
+    }
+
+    .support a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(190, 34, 59, 0.4);
+    }
+  </style>
+</head>
+<body id="contacto-body">
+  <div class="header">
+    <h1>Contáctanos</h1>
+    <p>Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de correo, teléfono o redes sociales.</p>
+  </div>
+
+  <div class="contact-container">
+    <!-- Card 1 -->
+    <div class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <h2>Correo y Teléfonos</h2>
+      <p><a href="mailto:soporte@fundabit.gob.ve">soporte@fundabit.gob.ve</a></p>
+      <p>Tel: (0212) 555-1234</p>
+      <p>Tel: (0212) 555-5678</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="contact-card">
+      <i class="fas fa-share-alt"></i>
+      <h2>Redes Sociales</h2>
+      <div class="social-links">
+        <ul>
+          <li><a href="https://www.instagram.com/fundabitoficial/" target="_blank"><i class="ri-instagram-line"></i></a></li>
+          <li><a href="https://www.facebook.com/Fundabitoficial" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
+          <li><a href="https://t.me/fundabit" target="_blank"><i class="ri-telegram-fill"></i></a></li>
+          <li><a href="https://www.youtube.com/@Fundabit_Oficial" target="_blank"><i class="ri-youtube-fill"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="support">
+    <h3>¿Quieres volver al inicio?</h3>
+    <a href="index.html">Regresar al Inicio</a>
+  </div>
+</body>
+</html>
