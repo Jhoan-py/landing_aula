@@ -155,18 +155,7 @@ header {
   padding: 3rem 1.5rem;
 }
 
-.bienvenida-card {
-  max-width: 900px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-  border-left: 6px solid #be223b;
-  border-right: 6px solid #be223b;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .bienvenida-card:hover {
   transform: translateY(-5px);
