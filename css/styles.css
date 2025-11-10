@@ -330,3 +330,32 @@ header {
 .footer-apps ul li a img.app-icon:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 0;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+}
